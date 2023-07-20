@@ -10,7 +10,7 @@ interface Props {
 
 const ProductCardComponent = ({imageLink, name, price, description}: Props) => {
   return (
-    <div className="card w-64 bg-primary text-primary-content">
+    <div className="card w-64 h-64 bg-primary text-primary-content">
         <figure>
             <img src={imageLink} />
         </figure>
