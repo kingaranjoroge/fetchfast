@@ -12,14 +12,14 @@ interface Props {
 const ProductCardComponent = ({imageLink, name, price, description}: Props) => {
   return (
     <div className="card w-64 bg-base-300 shadow-xl">
-        {/* <Image
+        <Image
             src={imageLink}
             alt="picture of product"
-        /> */}
-        <figure className="h-52">
+        />
+        {/* <figure className="h-52">
             <img src={imageLink} />
-        </figure>
-        <div className="card-body">
+        </figure> */}
+        <div className="p-4">
             <h2 className="card-title">
                 {name}
                 <div className="badge badge-secondary">kes. {price}</div>
