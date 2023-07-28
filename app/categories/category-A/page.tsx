@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductCardComponent from '@/components/ProductCardComponent'
+// import pizza from '../../../public/pizza.jpg'
 
 const CategoryAProducts = () => {
   return (
