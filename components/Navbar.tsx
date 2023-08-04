@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 
 const Navbar = async () => {
 
@@ -10,16 +11,25 @@ const Navbar = async () => {
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h7" /></svg>
                 </label>
                 <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                    <li><a>Homepage</a></li>
-                    <li><a>categories</a></li>
-                    <li><a>Products</a></li>
-                </ul>
+                    <li><Link href="/">Homepage</Link></li>
+                    <li><Link href="/categories">Categories</Link></li>
+                    <div className="ml-2">
+                        <li><Link href="/categories/category-A">Category-A</Link></li>
+                        <li><Link href="/categories/category-B">Category-B</Link></li>
+                        <li><Link href="/categories/category-C">Category-C</Link></li>
+                        <li><Link href="/categories/category-D">Category-D</Link></li>
+                        <li><Link href="/categories/category-E">Category-E</Link></li>
+                        <li><Link href="/categories/category-F">Category-F</Link></li>
+                    </div>                    
+                </ul> 
             </div>
         </div>
         <div className="navbar-center">
             <a className="btn btn-ghost normal-case text-xl">FetchFast</a>
         </div>
         <div className="navbar-end">
+            <Link href="signup"><button className="btn btn-outline mr-3 h-8 min-h-8 rounded-md">SignUp</button></Link>
+            <Link href="signin"><button className="btn btn-outline h-8 min-h-8 rounded-md">SignIn</button></Link>
             <button className="btn btn-ghost btn-circle">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
             </button>

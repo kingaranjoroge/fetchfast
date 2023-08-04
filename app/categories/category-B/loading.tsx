@@ -1,12 +1,11 @@
 import React from 'react'
 
-export default function Home() {
-
-  // throw new Error('An error occurred')
-
+const Loading = () => {
   return (
     <main className="flex flex-grow justify-center items-center">
-      <h1>Home</h1>
+        <h1>Loading...</h1>
     </main>
   )
 }
+
+export default Loading
