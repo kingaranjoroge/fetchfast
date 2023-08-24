@@ -9,7 +9,7 @@ const CategoryAProducts = () => {
             <ProductCardComponent  
                 imageLink = {pizza}
                 name = 'pizza'
-                price = {300}
+                price = {400}
                 description = 'medium thick-crust pepperoni pizza'
             />
             <ProductCardComponent  
