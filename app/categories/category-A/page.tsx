@@ -5,7 +5,7 @@ import pizza from '../../../public/pizza2.jpg'
 const CategoryAProducts = () => {
   return (
     <main className="flex flex-grow justify-center items-center pt-20">
-        <section className="grid grid-cols-4 gap-8 place-content-center">
+        <section className="grid grid-cols-4 gap-8 place-content-center mb-2">
             <ProductCardComponent  
                 imageLink = {pizza}
                 name = 'pizza'

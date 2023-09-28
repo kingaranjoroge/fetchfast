@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
-import backgroundImage from '../public/homepage-background1.jpg'
+import backgroundImage from '../public/homepagebg3.jpg'
 import Link from 'next/link';
 import Categories from './categories/page';
 
