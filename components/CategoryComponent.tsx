@@ -8,7 +8,7 @@ interface Props {
 
 const CategoryComponent = ({name}: Props) => {
   return (
-    <div className="card w-64 h-40 bg-slate-500 text-primary-content bg-opacity-50">
+    <div className="card w-64 h-40 bg-slate-500 text-primary-content bg-opacity-70">
       {/* <Image
         alt="Background Image"
         src={categorybg}

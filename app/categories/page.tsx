@@ -3,6 +3,7 @@ import Link from 'next/link'
 import CategoryComponent from '@/components/CategoryComponent'
 import Image from 'next/image'
 import backgroundImage from '../../public/categorybg2.jpg'
+import Nav from '@/components/Nav'
 
 const Categories = () => {
   return (
@@ -18,6 +19,7 @@ const Categories = () => {
           objectFit: 'cover',
         }}
       />
+      <Nav />
       <section className="grid grid-cols-3 gap-8 place-content-center">
         <Link href="/categories/category-A"><CategoryComponent name='Category A' /></Link>        
         <Link href="/categories/category-B"><CategoryComponent name='Category B' /></Link>        

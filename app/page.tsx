@@ -2,7 +2,8 @@ import React from 'react'
 import Image from 'next/image';
 import backgroundImage from '../public/homepagebg3.jpg'
 import Link from 'next/link';
-import Categories from './categories/page';
+// import Categories from './categories/page';
+import Navbar from '@/components/Navbar'
 
 export default function Home() {
 
@@ -21,6 +22,7 @@ export default function Home() {
           objectFit: 'cover',
         }}
       />
+      <Navbar />
       <div className='flex justify-center items-center flex-col z-10'>
         <h1 className='font-bold text-3xl italic text-white'>Welcome to FetchFast.</h1>        
         <h1 className='font-bold text-3xl italic text-white'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
