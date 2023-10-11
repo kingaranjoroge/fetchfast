@@ -7,8 +7,6 @@ const usersSchema = new Schema(
         email: String,
         phone: Number,
         password: String,
-        pendingOrders: Number,
-        ordersCompleted: Number
     },
     {
         timestamps: true
