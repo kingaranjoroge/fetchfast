@@ -1,32 +1,15 @@
-import { NextResponse } from 'next/server' 
-import connectMongoDB from '@/libs/mongodb'
-import User from '@/models/users'
+import { NextResponse } from 'next/server';
+import connectMongoDB from '@/libs/mongodb';
+import User from '@/models/users';
 
-export async function POST(request: Request) {
+export async function GET(request: Request) {
+  await connectMongoDB();
 
-  await connectMongoDB() 
-
-    const {name, email, phone, password} = await request.json()
-    
-     // Check if a user with the same email already exists in the database
-     const existingEmailUser = await User.findOne({ email });
-
-     if (existingEmailUser) {
-       return NextResponse.json({ message: "User with the same email already exists" });
-     }
- 
-     // Check if a user with the same phone already exists in the database
-     const existingPhoneUser = await User.findOne({ phone });
- 
-     if (existingPhoneUser) {
-       return NextResponse.json({ message: "User with the same phone number already exists" });
-     }
-
-    const formData = {name, email, phone, password} 
-
-    await User.create(formData)
-
-    console.log(formData)
-
-    return NextResponse.json({ message: "User created" })
+  try {
+    const allUsers = await User.find();
+    return NextResponse.json(allUsers);
+  } catch (error) {
+    console.error('Error fetching all users:', error);
+    return NextResponse.json({message: "Failed to retrieve users"});
+  }
 }
