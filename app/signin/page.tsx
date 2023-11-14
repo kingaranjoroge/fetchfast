@@ -38,6 +38,12 @@ const SignIn = () => {
           await router.push('/categories');
         }
       }
+
+      setFormData({
+        email: '',
+        password: '',      
+      })
+
     } catch (error) {
       // Handle error or display a message to the user
       console.error('Error logging in:', error);

@@ -23,7 +23,7 @@ const SignUp = () => {
 
     try {
       // Send the form data to the API endpoint
-      const response = await axios.post('http://localhost:3000/api/users', formData);
+      const response = await axios.post('http://localhost:3000/api/register', formData);
 
       // Handle success or other logic here
       console.log(response.data);
