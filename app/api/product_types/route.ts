@@ -6,7 +6,7 @@ export async function POST(request: Request) {
 
     await connectMongoDB() 
   
-      const { name, price, quantityAvailable, status, productId } = await request.json()
+      const { name, price, description, quantityAvailable, status, productId } = await request.json()
       
        // Check if a product_type with the same name already exists in the database
        const existingProductType = await ProductType.findOne({ name });
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
          return NextResponse.json({ message: "ProductType already exists" });
        }
    
-      const product_type = { name, price, quantityAvailable, status, productId } 
+      const product_type = { name, price, description, quantityAvailable, status, productId } 
   
       await ProductType.create(product_type)
   
