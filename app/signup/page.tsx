@@ -8,7 +8,7 @@ import { useRouter } from 'next/navigation'
 const SignUp = () => {
   const router = useRouter()
 
-  const [formData, setFormData] = useState({
+  const [user, setUser] = useState({
     name: '',
     email: '',
     phone: '',
@@ -23,7 +23,7 @@ const SignUp = () => {
 
     try {
       // Send the form data to the API endpoint
-      const response = await axios.post('http://localhost:3000/api/register', formData);
+      const response = await axios.post('http://localhost:3000/api/users', user);
 
       // Handle success or other logic here
       console.log(response.data);
@@ -46,7 +46,7 @@ const SignUp = () => {
       }
 
       // Reset the form fields
-      setFormData({
+      setUser({
         name: '',
         email: '',
         phone: '',
@@ -61,7 +61,7 @@ const SignUp = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    setFormData((prevData) => ({
+    setUser((prevData) => ({
       ...prevData,
       [name]: value
     }));
@@ -75,7 +75,7 @@ const SignUp = () => {
           type="text"
           name="name"
           placeholder="Name"
-          value={formData.name}
+          value={user.name}
           onChange={handleInputChange}
           className="input input-bordered w-1/2"
         />
@@ -83,7 +83,7 @@ const SignUp = () => {
           type="email"
           name="email"
           placeholder="Email"
-          value={formData.email}
+          value={user.email}
           onChange={handleInputChange}
           className="input input-bordered w-1/2"
         />
@@ -92,7 +92,7 @@ const SignUp = () => {
           type="tel"
           name="phone"
           placeholder="Phone"
-          value={formData.phone}
+          value={user.phone}
           onChange={handleInputChange}
           className="input input-bordered w-1/2"
         />
@@ -101,7 +101,7 @@ const SignUp = () => {
           type="password"
           name="password"
           placeholder="Password"
-          value={formData.password}
+          value={user.password}
           onChange={handleInputChange}
           className="input input-bordered w-1/2"
         />
@@ -109,7 +109,7 @@ const SignUp = () => {
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
-          value={formData.confirmPassword}
+          value={user.confirmPassword}
           onChange={handleInputChange}
           className="input input-bordered w-1/2"
         />
