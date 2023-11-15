@@ -4,7 +4,7 @@ import { Category } from '@/common.types';
 
 const categorySchema = new Schema<Category>(
     {
-      name: {
+      name: { 
         type: String,
         required: true
       } 
