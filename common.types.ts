@@ -1,5 +1,14 @@
 import mongoose from "mongoose";
 
+export interface User {
+    _id?: mongoose.Types.ObjectId;
+    name: string;
+    email: string;
+    phone: number;
+    password: number;
+    role?: 'Admin' | 'Employee' | 'Customer';   
+}
+
 export interface Category {
     _id?: mongoose.Types.ObjectId;
     name: string;
@@ -15,6 +24,7 @@ export interface ProductType {
     _id?: mongoose.Types.ObjectId;
     name: string;
     price: number;
+    description: string,
     quantityAvailable: number;
     status: 'Available' | 'Out of Stock';
     productId: mongoose.Types.ObjectId;
