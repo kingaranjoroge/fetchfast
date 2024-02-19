@@ -83,7 +83,7 @@ const SignIn = () => {
         </button>
         {errorMessage && <div className="text-red-500">{errorMessage}</div>}
         <div className="flex flex-row w-1/2 justify-between items-center mt-1">
-          <span>Don't have an account?</span>
+          <span>Dont have an account?</span>
           <span>
             <Link href="signup">Sign Up</Link>
           </span>

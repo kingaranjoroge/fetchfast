@@ -15,9 +15,9 @@ export async function POST(request: Request) {
   }
 
   // Check if the provided password matches the user's password
-  // if (existingUser.password !== password) {
-  //   return NextResponse.json({ message: 'Wrong password' });
-  // }
+  if (existingUser.password !== password) {
+    return NextResponse.json({ message: 'Wrong password' });
+  }
 
   // If both email and password are correct, return a success response
   return NextResponse.json({ message: "Logged in successfully" })
