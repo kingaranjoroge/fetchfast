@@ -29,6 +29,7 @@ export async function POST(request: Request) {
     console.log(user)
 
     return NextResponse.json({ message: "User created" })
+
 }
 
 export async function GET(request: Request) {
@@ -41,4 +42,5 @@ export async function GET(request: Request) {
     console.error('Error fetching all users:', error);
     return NextResponse.json({message: "Failed to retrieve users"});
   }
+
 }

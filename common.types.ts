@@ -29,3 +29,14 @@ export interface ProductType {
     status: 'Available' | 'Out of Stock';
     productId: mongoose.Types.ObjectId;
 }
+
+export interface Order {
+    _id?: mongoose.Types.ObjectId;
+    customerName: string;
+    customerPhone: number;
+    customerEmail: string;
+    productName: string;    
+    quantity: number;
+    price: number;
+    status: 'Pending' | 'Approved' | 'Rejected';
+}

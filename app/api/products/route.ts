@@ -22,7 +22,7 @@ export async function POST(request: Request) {
       console.log(product)
   
       return NextResponse.json({ message: "Product created" })
-  }
+}
 
   export async function GET(request: Request) {
     await connectMongoDB();
