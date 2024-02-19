@@ -24,7 +24,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "Category created" })
   }
 
-  export async function GET(request: Request) {
+  export async function GET() {
     await connectMongoDB();
   
     try {
