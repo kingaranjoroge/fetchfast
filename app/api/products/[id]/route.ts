@@ -4,7 +4,7 @@ import Product from '@/models/products';
 import { Props } from '@/common.types';
 
 
-export async function GET(request: string, { params } : Props) {
+export async function GET(request: Request, { params } : Props) {
   await connectMongoDB()
 
   const { id } = params
