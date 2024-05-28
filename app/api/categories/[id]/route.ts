@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
 import connectMongoDB from '@/libs/mongodb';
 import Category from '@/models/categories';
+import { Props } from '@/common.types';
 
-export async function GET(request: Request , { params }) {
+
+export async function GET(request: Request , { params } : Props) {
   await connectMongoDB()
 
   const { id } = params
@@ -12,7 +14,7 @@ export async function GET(request: Request , { params }) {
   return NextResponse.json({category})
 }
 
-export async function PATCH(request: string, { params }) {
+export async function PATCH(request: Request, { params } : Props) {
 
   await connectMongoDB();
 
@@ -32,7 +34,7 @@ export async function PATCH(request: string, { params }) {
   return NextResponse.json({ message: "Category updated" });
 }
 
-export async function DELETE(request: string, { params }) {
+export async function DELETE(request: Request, { params } : Props) {
 
   await connectMongoDB();
 

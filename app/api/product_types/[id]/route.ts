@@ -1,8 +1,10 @@
 import { NextResponse } from 'next/server';
 import connectMongoDB from '@/libs/mongodb';
 import ProductType from '@/models/product_types';
+import { Props } from '@/common.types';
 
-export async function GET(request: Request, { params }) {
+
+export async function GET(request: Request, { params } : Props) {
   await connectMongoDB()
 
   const { id } = params
@@ -12,7 +14,7 @@ export async function GET(request: Request, { params }) {
   return NextResponse.json({product_type})
 }
 
-export async function PATCH(request: Request, { params }) {
+export async function PATCH(request: Request, { params } : Props) {
 
   await connectMongoDB();
 
@@ -36,7 +38,7 @@ export async function PATCH(request: Request, { params }) {
   return NextResponse.json({ message: "Product Type updated" });
 }
 
-export async function DELETE(request: Request, { params }) {
+export async function DELETE(request: Request, { params } : Props) {
 
   await connectMongoDB();
 
