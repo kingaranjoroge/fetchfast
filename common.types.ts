@@ -40,3 +40,7 @@ export interface Order {
     price: number;
     status: 'Pending' | 'Approved' | 'Rejected';
 }
+
+export interface Props {
+    params: { id: string };
+  };
