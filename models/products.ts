@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-import { Product } from '@/common.types';
+import type { Product } from '@/common.types';
 
 const productSchema = new Schema<Product>(
     {

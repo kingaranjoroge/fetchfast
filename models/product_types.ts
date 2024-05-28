@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-import { ProductType } from '@/common.types';
+import type { ProductType } from '@/common.types';
 
 const productTypeSchema = new mongoose.Schema<ProductType>(
     {
