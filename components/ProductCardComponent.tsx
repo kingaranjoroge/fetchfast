@@ -40,7 +40,7 @@ const ProductCardComponent = ({ imageLink, name, price, description }: Props) =>
                     <div className="badge badge-secondary">kes. {price}</div>
                 </h2>
                 <p>{description}</p>
-                <div className="card-actions justify-end">
+                <div className="card-actions justify-end pt-2">
                     <button className="btn btn-active btn-accent" onClick={toggleModal}>
                         Order
                     </button>
