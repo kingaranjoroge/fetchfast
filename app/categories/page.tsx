@@ -21,12 +21,12 @@ const Categories = () => {
       />
       <Nav />
       <section className="grid grid-cols-3 gap-8 place-content-center">
-        <Link href="/categories/category-A"><CategoryComponent name='Category A' /></Link>        
-        <Link href="/categories/category-B"><CategoryComponent name='Category B' /></Link>        
-        <Link href="/categories/category-C"><CategoryComponent name='Category C' /></Link>        
-        <Link href="/categories/category-D"><CategoryComponent name='Category D' /></Link>        
-        <Link href="/categories/category-E"><CategoryComponent name='Category E' /></Link>        
-        <Link href="/categories/category-F"><CategoryComponent name='Category F' /></Link>                
+        <Link href="/categories/appetizers"><CategoryComponent name='Appetizers' /></Link>        
+        <Link href="/categories/beverages"><CategoryComponent name='Beverages' /></Link>        
+        <Link href="/categories/desserts"><CategoryComponent name='Desserts' /></Link>        
+        <Link href="/categories/main-courses"><CategoryComponent name='Main Courses' /></Link>        
+        <Link href="/categories/salads"><CategoryComponent name='Salads' /></Link>        
+        <Link href="/categories/soups&stews"><CategoryComponent name='Soups & Stews' /></Link>                
       </section>
     </main>
   )
