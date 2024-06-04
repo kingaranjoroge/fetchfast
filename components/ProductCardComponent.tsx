@@ -28,19 +28,27 @@ const ProductCardComponent = ({ imageLink, name, price, description }: Props) =>
         return price * quantity;
     };
 
+    const truncateDescription = (desc: string) => {
+        const words = desc.split(' ');
+        if (words.length > 5) {
+            return words.slice(0, 5).join(' ') + '...';
+        }
+        return desc;
+    };
+
     return (
-        <div className="card w-64 bg-base-300 shadow-xl">
+        <div className="flex flex-col card w-64 bg-base-300 shadow-xl">
             <Image
                 src={imageLink}
                 alt="picture of product"
             />
-            <div className="p-4">
-                <h2 className="card-title">
-                    {name}
-                    <div className="badge badge-secondary">kes. {price}</div>
-                </h2>
-                <p>{description}</p>
-                <div className="card-actions justify-end pt-2">
+            <div className="flex flex-col p-4 gap-2">
+                <div className='flex flex-row justify-between'>
+                    <h2 className="card-title text-sm font-bold">{name}</h2>
+                    <div className="badge badge-secondary">kes. {price} </div>
+                </div>                
+                <p className='text-sm overflow-hidden whitespace-nowrap overflow-ellipsis hover:overflow-visible hover:whitespace-normal' title={description}>{description}</p>
+                <div className="card-actions justify-center pt-2">
                     <button className="btn btn-active btn-accent" onClick={toggleModal}>
                         Order
                     </button>
