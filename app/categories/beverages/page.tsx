@@ -1,6 +1,6 @@
 import React from 'react'
 import ProductCardComponent from '@/components/ProductCardComponent'
-import pizza from '../../../public/pizza2.jpg'
+import pizza from '../../../public/main-courses/pizza.jpg'
 import Nav from '@/components/Nav'
 
 const CategoryAProducts = () => {
