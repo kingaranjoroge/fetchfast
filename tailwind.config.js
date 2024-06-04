@@ -14,6 +14,12 @@ module.exports = {
       },
     },
   },
+  variants: {
+    extend: {
+      overflow: ['hover', 'focus'], // add hover and focus variants for overflow
+      whitespace: ['hover', 'focus'], // add hover and focus variants for whitespace
+    },
+  },
   plugins: [
     require("daisyui")
   ],
