@@ -11,7 +11,7 @@ import salmon from '../../../public/main-courses/salmon.png'
 import shepherds_pie from '../../../public/main-courses/shepherds-pie.png'
 import sushi from '../../../public/main-courses/sushi.png'
 import tacos from '../../../public/main-courses/tacos.png'
-import pizza from '../../../public/main-courses/pizza.jpg'
+import pizza from '../../../public/main-courses/pizza.png'
 import Nav from '@/components/Nav';
 
 const CategoryAProducts = () => {
