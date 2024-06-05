@@ -28,13 +28,13 @@ const ProductCardComponent = ({ imageLink, name, price, description }: Props) =>
         return price * quantity;
     };
 
-    const truncateDescription = (desc: string) => {
-        const words = desc.split(' ');
-        if (words.length > 5) {
-            return words.slice(0, 5).join(' ') + '...';
-        }
-        return desc;
-    };
+    // const truncateDescription = (desc: string) => {
+    //     const words = desc.split(' ');
+    //     if (words.length > 5) {
+    //         return words.slice(0, 5).join(' ') + '...';
+    //     }
+    //     return desc;
+    // };
 
     return (
         <div className="flex flex-col card w-64 bg-base-300 shadow-xl">
