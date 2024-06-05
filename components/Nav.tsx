@@ -15,11 +15,11 @@ const Nav = async () => {
                     <li><Link href="/categories">Categories</Link></li>
                     <div className="ml-2">
                         <li><Link href="/categories/appetizers">Appetizers</Link></li>
-                        <li><Link href="/categories/main-courses">Beverages</Link></li>
-                        <li><Link href="/categories/salads">Desserts</Link></li>
-                        <li><Link href="/categories/soups&stews">Main Courses</Link></li>
-                        <li><Link href="/categories/desserts">Salads</Link></li>
-                        <li><Link href="/categories/beverages">Soups & Stews</Link></li>
+                        <li><Link href="/categories/beverages">Beverages</Link></li>
+                        <li><Link href="/categories/desserts">Desserts</Link></li>
+                        <li><Link href="/categories/main-courses">Main Courses</Link></li>
+                        <li><Link href="/categories/salads">Salads</Link></li>
+                        <li><Link href="/categories/soups&stews">Soups & Stews</Link></li>
                     </div>                    
                 </ul> 
             </div>
