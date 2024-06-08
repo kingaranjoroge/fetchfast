@@ -1,6 +1,17 @@
 import React from 'react'
 import ProductCardComponent from '@/components/ProductCardComponent'
-import pizza from '../../../public/main-courses/pizza.png'
+import beef_stew from '../../../public/soups&stews/Beef Stew.png'
+import butternut_squash_soup from '../../../public/soups&stews/Butternut Squash Soup.png'
+import chicken_noodle_soup from '../../../public/soups&stews/Chicken Noodle Soup.png' 
+import clam_chowder from '../../../public/soups&stews/Clam Chowder.png'
+import french_onion_soup from '../../../public/soups&stews/French Onion Soup.png'
+import lentil_soup from '../../../public/soups&stews/Lentil Soup.png'
+import minestrone_soup from '../../../public/soups&stews/Minestrone Soup.png'
+import mulligatawny_soup from '../../../public/soups&stews/Mulligatawny Soup.png'
+import pho from '../../../public/soups&stews/Pho.png'
+import potato_leek_soup from '../../../public/soups&stews/potato Leek Soup.png'
+import tomato_basil_soup from '../../../public/soups&stews/Tomato Basil Soup.png'
+import tortilla_soup from '../../../public/soups&stews/Tortilla Soup.png'
 import Nav from '@/components/Nav'
 
 const CategoryAProducts = () => {
@@ -9,76 +20,76 @@ const CategoryAProducts = () => {
         <section className="grid grid-cols-4 gap-8 place-content-center">
             <Nav />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {beef_stew}
+                name = 'beef stew'
+                price = {750}
+                description = 'Beef Stew with Root Vegetables'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {butternut_squash_soup}
+                name = 'butternut squash soup'
+                price = {800}
+                description = 'Butternut Squash Soup with Cinnamon Cream'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {chicken_noodle_soup}
+                name = 'chicken noodle soup'
+                price = {900}
+                description = 'Chicken Noodle Soup'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {clam_chowder}
+                name = 'clam chowder'
+                price = {1000}
+                description = 'Clam Chowder in Bread Bowl'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {french_onion_soup}
+                name = 'french onion soup'
+                price = {700}
+                description = 'French Onion Soup with Gruyere Croutons'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {lentil_soup}
+                name = 'lentil soup'
+                price = {600}
+                description = 'Lentil Soup with Sausage'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {minestrone_soup}
+                name = 'minestrone soup'
+                price = {900}
+                description = 'Minestrone Soup with Pesto'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {mulligatawny_soup}
+                name = 'mulligatawny soup'
+                price = {1100}
+                description = 'Mulligatawny Soup with Chicken and Rice'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {pho}
+                name = 'pho'
+                price = {1200}
+                description = 'Pho with Sliced Beef and Fresh Herbs'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {potato_leek_soup}
+                name = 'potato leek soup'
+                price = {750}
+                description = 'Potato Leek Soup with Crispy Shallots'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {tomato_basil_soup}
+                name = 'tomato basil soup'
+                price = {700}
+                description = 'Tomato Basil Soup with Grilled Cheese Sandwich'
             />
             <ProductCardComponent  
-                imageLink = {pizza}
-                name = 'pizza'
-                price = {300}
-                description = 'medium thick-crust pepperoni pizza'
+                imageLink = {tortilla_soup}
+                name = 'tortilla soup'
+                price = {1000}
+                description = 'Tortilla Soup with Avocado and Tortilla Strips'
             />
         </section>
     </main>
