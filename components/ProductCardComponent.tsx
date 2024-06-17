@@ -37,7 +37,7 @@ const ProductCardComponent = ({ imageLink, name, price, description }: Props) =>
     // };
 
     return (
-        <div className="flex flex-col card w-64 bg-base-300 shadow-xl">
+        <div className="flex flex-col card w-64 md:w-72 xl:w-64 bg-base-300 shadow-xl">
             <Image
                 src={imageLink}
                 alt="picture of product"

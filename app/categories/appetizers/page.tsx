@@ -17,7 +17,7 @@ import spring_rolls from '../../../public/appetizers/spring-rolls.png'
 const CategoryAProducts = () => {
   return (
     <main className="flex flex-grow justify-center items-center pt-20">
-        <section className="grid grid-cols-4 gap-8 place-content-center mb-2">
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-x-16 gap-8 place-content-center mb-2">
             <Nav />
             <ProductCardComponent  
                 imageLink = {beef_satay}
