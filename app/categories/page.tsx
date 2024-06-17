@@ -7,7 +7,7 @@ import Nav from '@/components/Nav'
 
 const Categories = () => {
   return (
-    <main className="flex flex-grow justify-center items-center">
+    <main className="flex flex-grow justify-center items-center overflow-auto">
       <Image
         alt="Background Image"
         src={backgroundImage}
@@ -20,7 +20,7 @@ const Categories = () => {
         }}
       />
       <Nav />
-      <section className="grid grid-cols-3 gap-8 place-content-center">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-16 gap-8 place-content-center pt-20">
         <Link href="/categories/appetizers"><CategoryComponent name='Appetizers' /></Link>        
         <Link href="/categories/beverages"><CategoryComponent name='Beverages' /></Link>        
         <Link href="/categories/desserts"><CategoryComponent name='Desserts' /></Link>        
