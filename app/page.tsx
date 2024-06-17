@@ -23,13 +23,13 @@ export default function Home() {
         }}
       />
       <Navbar />
-      <div className='flex justify-center items-center flex-col z-10'>
-        <h1 className='font-bold text-3xl italic text-white'>Welcome to FetchFast.</h1>        
-        <h1 className='font-bold text-3xl italic text-white'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
+      <div className='flex flex-col justify-center items-center z-10 gap-4 xl:gap-0'>
+        <h1 className='text-2xl sm:text-3xl text-white font-bold italic'>Welcome to FetchFast.</h1>        
+        <h1 className='text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-bold italic pl-8'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
       </div>      
-      <div className='flex justify-center items-center flex-row z-10 gap-10 pt-10'>
-        <Link href='/categories'><button className="btn btn-neutral bg-slate-600 text-white">View our Categories</button></Link>
-        <Link href=''><button className="btn btn-neutral bg-slate-600 text-white">Order product</button> </Link>               
+      <div className='flex justify-center items-center flex-row z-10 gap-10 pt-10 px-10'>
+        <Link href='/categories'><button className="btn btn-neutral bg-slate-600 text-white leading-5 pb-1">View our Categories</button></Link>
+        <Link href=''><button className="btn btn-neutral bg-slate-600 text-white	leading-5 pb-1">Order product</button> </Link>               
       </div>      
     </main>
   )
