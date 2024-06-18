@@ -10,18 +10,7 @@ export default function Home() {
   // throw new Error('An error occurred')
 
   return (
-    <main className="flex flex-grow justify-center items-center flex-col">
-      <Image
-        alt="Background Image"
-        src={backgroundImage}
-        placeholder="blur"
-        quality={100}
-        fill
-        sizes="100vw"
-        style={{
-          objectFit: 'cover',
-        }}
-      />
+    <main className="flex flex-grow justify-center items-center flex-col bg-homepage-background bg-cover bg-center bg-fixed">
       <Navbar />
       <div className='flex flex-col justify-center items-center z-10 gap-4 xl:gap-0'>
         <h1 className='text-2xl sm:text-3xl text-white font-bold italic'>Welcome to FetchFast.</h1>        
