@@ -21,8 +21,8 @@ export default function Home() {
         <h1 className='text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-bold italic'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
       </div>      
       <div className='flex justify-center items-center flex-row z-10 gap-10 pt-10 px-10'>
-        <Link href='/categories'><button className="btn btn-neutral bg-slate-600 text-white leading-5 pb-1">View our Categories</button></Link>
-        <Link href=''><button className="btn btn-neutral bg-slate-600 text-white	leading-5 pb-1">Order product</button> </Link>               
+        <Link href='/categories'><button className="btn btn-neutral bg-slate-600 text-white leading-5 py-0.5 sm:py-0">View our Categories</button></Link>
+        <Link href=''><button className="btn btn-neutral bg-slate-600 text-white	leading-5 py-0.5">Order product</button> </Link>               
       </div>      
     </main>
   )
