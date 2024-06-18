@@ -12,6 +12,10 @@ export default function Home() {
   return (
     <main className="flex flex-grow justify-center items-center flex-col bg-homepage-background bg-cover bg-center bg-fixed">
       <Navbar />
+      <div className='fixed top-16 place-self-center md:right-4'>
+        <Link href="signup"><button className="btn bg-transparent bg border-none mr-3 h-8 min-h-8 rounded-md text-white font-bold">Register</button></Link>
+        <Link href="signin"><button className="btn bg-transparent border-none h-8 min-h-8 rounded-md text-white font-bold">Log-In</button></Link>
+      </div>
       <div className='flex flex-col justify-center items-center z-10 gap-4 xl:gap-0'>
         <h1 className='text-2xl sm:text-3xl text-white font-bold italic'>Welcome to FetchFast.</h1>        
         <h1 className='text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-bold italic pl-8'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
