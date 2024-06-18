@@ -9,7 +9,7 @@ const Categories = () => {
   return (
     <main className="flex flex-grow justify-center items-center flex-col bg-category-background bg-cover bg-center bg-fixed">
       <Nav />
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-16 gap-8 place-content-center pt-20">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-16 gap-8 place-content-center pt-20 pb-4">
         <Link href="/categories/appetizers"><CategoryComponent name='Appetizers' /></Link>        
         <Link href="/categories/beverages"><CategoryComponent name='Beverages' /></Link>        
         <Link href="/categories/desserts"><CategoryComponent name='Desserts' /></Link>        
