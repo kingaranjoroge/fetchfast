@@ -17,7 +17,7 @@ export default function Home() {
         <Link href="signin"><button className="btn bg-transparent border-none h-8 min-h-8 rounded-md text-white font-bold">Log-In</button></Link>
       </div>
       <div className='flex flex-col justify-start sm:justify-center sm:items-center z-10 gap-4 xl:gap-0 px-16 sm:px-0'>
-        <h1 className='text-2xl sm:text-3xl text-white font-bold italic'>Welcome to FetchFast.</h1>        
+        <h1 className='text-xl sm:text-3xl text-white font-bold italic'>Welcome to FetchFast.</h1>        
         <h1 className='text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-bold italic'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
       </div>      
       <div className='flex justify-center items-center flex-row z-10 gap-10 pt-10 px-10'>
