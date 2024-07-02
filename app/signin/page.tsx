@@ -60,7 +60,7 @@ const SignIn = () => {
 
   return (
     <main className="flex flex-grow justify-center items-center bg-base-100">
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 w-full md:w-3/4 lg:w-1/2">
+      <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 w-full md:w-3/4 lg:w-1/2 px-8">
         <h1 className="text-2xl font-bold mb-4 text-violet-500">Login</h1>
         <input
           type="text"
@@ -68,7 +68,7 @@ const SignIn = () => {
           placeholder="Email"
           value={formData.email}
           onChange={handleInputChange}
-          className="input input-bordered w-1/2"
+          className="input input-bordered w-full sm:w-3/4"
         />
         <input
           type="password"
@@ -76,13 +76,13 @@ const SignIn = () => {
           placeholder="Password"
           value={formData.password}
           onChange={handleInputChange}
-          className="input input-bordered w-1/2"
+          className="input input-bordered w-full sm:w-3/4"
         />
-        <button type="submit" className="btn btn-primary w-1/2">
+        <button type="submit" className="btn btn-primary w-full sm:w-3/4">
           Login
         </button>
         {errorMessage && <div className="text-red-500">{errorMessage}</div>}
-        <div className="flex flex-row w-1/2 justify-between items-center mt-1">
+        <div className="flex flex-row w-full sm:w-3/4 justify-between items-center mt-1">
           <span>Dont have an account?</span>
           <span>
             <Link href="signup">Sign Up</Link>
