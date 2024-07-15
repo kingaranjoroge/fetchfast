@@ -20,7 +20,7 @@ const userSchema = new Schema<User>(
             required: true
         },
         password: {
-            type: Number,
+            type: String,
             required: true
         },
         role: {

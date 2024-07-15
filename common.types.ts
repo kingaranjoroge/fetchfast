@@ -5,7 +5,7 @@ export interface User {
     name: string;
     email: string;
     phone: number;
-    password: number;
+    password: string;
     role?: 'Admin' | 'Employee' | 'Customer';   
 }
 
