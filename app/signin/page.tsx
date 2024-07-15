@@ -19,7 +19,7 @@ const SignIn = () => {
 
     try {
       // Send the form data to the login API endpoint
-      const response = await axios.post('http://localhost:3000/api/login', formData);
+      const response = await axios.post('https://fetchfast.vercel.app/api/login', formData);
 
       // Handle success or other logic here
       console.log(response.data);
