@@ -1,34 +1,38 @@
 import { NextResponse } from 'next/server';
 import connectMongoDB from '@/libs/mongodb';
 import User from '@/models/users';
+import bcrypt from 'bcrypt'
 
 export async function POST(request: Request) {
 
   await connectMongoDB() 
 
-    const {name, email, phone, password, role} = await request.json()
-    
-     // Check if a user with the same email already exists in the database
-     const existingEmailUser = await User.findOne({ email });
+  const {name, email, phone, password, role} = await request.json();
 
-     if (existingEmailUser) {
-       return NextResponse.json({ message: "User with the same email already exists" });
-     }
- 
-     // Check if a user with the same phone already exists in the database
-     const existingPhoneUser = await User.findOne({ phone });
- 
-     if (existingPhoneUser) {
-       return NextResponse.json({ message: "User with the same phone number already exists" });
-     }
+  // Check if a user with the same email already exists in the database
+  const existingEmailUser = await User.findOne({ email });
 
-    const user = {name, email, phone, password, role} 
+  if (existingEmailUser) {
+    return NextResponse.json({ message: "User with the same email already exists" });
+  }
 
-    await User.create(user)
+  // Check if a user with the same phone already exists in the database
+  const existingPhoneUser = await User.findOne({ phone });
 
-    console.log(user)
+  if (existingPhoneUser) {
+    return NextResponse.json({ message: "User with the same phone number already exists" });
+  }
 
-    return NextResponse.json({ message: "User created" })
+  // Hash the password before saving
+  const hashedPassword = await bcrypt.hash(password, 10); // 10 is the number of rounds for salting
+
+  const user = {name, email, phone, password: hashedPassword, role};
+
+  await User.create(user);
+
+  console.log(user); // Note: Be cautious about logging sensitive information
+
+  return NextResponse.json({ message: "User created" });
 
 }
 
