@@ -4,6 +4,7 @@ import React, {useState} from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
+import { server } from '@/config';
 
 const SignIn = () => {
   const router = useRouter()
@@ -19,7 +20,7 @@ const SignIn = () => {
 
     try {
       // Send the form data to the login API endpoint
-      const response = await axios.post('https://fetchfast.vercel.app/api/login', formData);
+      const response = await axios.post(`${server}/api/login`, formData);
 
       // Handle success or other logic here
       console.log(response.data);

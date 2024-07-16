@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
 import { useRouter } from 'next/navigation'
+import { server } from '@/config';
 
 const SignUp = () => {
   const router = useRouter()
@@ -23,7 +24,7 @@ const SignUp = () => {
 
     try {
       // Send the form data to the API endpoint
-      const response = await axios.post('http://localhost:3000/api/users', user);
+      const response = await axios.post(`${server}/api/users`, user);
 
       // Handle success or other logic here
       console.log(response.data);
