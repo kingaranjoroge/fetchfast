@@ -17,36 +17,35 @@ const SignIn = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+  
     try {
-      // Send the form data to the login API endpoint
       const response = await axios.post(`${server}/api/login`, formData);
-
-      // Handle success or other logic here
+  
       console.log(response.data);
-
+  
       setErrorMessage('')
-
+  
       if (response && response.data) {
-        const { message } = response.data;
-
-        if (message === 'No such user exists') {
-          setErrorMessage(message);
-        } else if (message === 'Wrong password') {
+        const { message, user } = response.data; // Assuming the API returns a 'user' object on successful login
+  
+        if (message === 'No such user exists' || message === 'Wrong password') {
           setErrorMessage(message);
         } else {
-          // User created successfully, navigate to the homepage
+          // Assuming 'user' contains the user data on successful login
+          // Store user data in local storage
+          localStorage.setItem('user', JSON.stringify(user));
+  
+          // User logged in successfully, navigate to the homepage
           await router.push('/categories');
         }
       }
-
+  
       setFormData({
         email: '',
         password: '',      
       })
-
+  
     } catch (error) {
-      // Handle error or display a message to the user
       console.error('Error logging in:', error);
     }
   };
