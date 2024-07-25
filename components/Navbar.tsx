@@ -1,7 +1,18 @@
+"use client"
+
 import React from 'react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation';
+import { logout } from './Logout';
 
-const Navbar = async () => {
+const Navbar = () => {
+
+    const router: any = useRouter();
+
+    const handleLogout = () => {
+        logout(router); // Pass the router to the logout function
+    };
+
 
   return (
     <div className="navbar bg-base-300 fixed top-0 left-0 right-0 z-50">
@@ -20,7 +31,8 @@ const Navbar = async () => {
                         <li><Link href="/categories/main-courses">Main Courses</Link></li>
                         <li><Link href="/categories/salads">Salads</Link></li>
                         <li><Link href="/categories/soups&stews">Soups & Stews</Link></li>
-                    </div>                    
+                    </div>  
+                    <li><a href="#" onClick={handleLogout}>Logout</a></li>                   
                 </ul> 
             </div>
         </div>
