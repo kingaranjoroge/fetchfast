@@ -36,7 +36,7 @@ const Nav = () => {
             </div>
         </div>
         <div className="navbar-center">
-            <a className="btn btn-ghost normal-case text-xl text-white font-bold">FetchFast</a>
+            <a className="btn btn-ghost normal-case text-xl text-black dark:text-white font-bold">FetchFast</a>
         </div>
         <div className="navbar-end">
             <button className="btn btn-ghost btn-circle">

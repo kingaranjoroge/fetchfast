@@ -16,8 +16,8 @@ const LoginStatusChecker = () => {
 
   return (
     <div className='fixed top-16 place-self-center md:right-4'>
-      <Link href="signup"><button className="btn bg-transparent bg border-none mr-3 h-8 min-h-8 rounded-md text-white font-bold">Register</button></Link>
-      <Link href="signin"><button className="btn bg-transparent border-none h-8 min-h-8 rounded-md text-white font-bold">Log-In</button></Link>
+      <Link href="signup"><button className="btn bg-transparent border-none mr-3 h-8 min-h-8 rounded-md text-white font-bold hover:text-black dark:hover:text-white">Register</button></Link>
+      <Link href="signin"><button className="btn bg-transparent border-none h-8 min-h-8 rounded-md text-white font-bold hover:text-black dark:hover:text-white">Log-In</button></Link>
     </div>
   );
 };
