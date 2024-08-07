@@ -18,11 +18,16 @@ module.exports = {
   },
   variants: {
     extend: {
-      overflow: ['hover', 'focus'], // add hover and focus variants for overflow
-      whitespace: ['hover', 'focus'], // add hover and focus variants for whitespace
+      overflow: ['hover', 'focus'],
+      whitespace: ['hover', 'focus'],
     },
   },
   plugins: [
     require("daisyui")
   ],
+  daisyui: {
+    themes: ["light", "dark"],
+    darkTheme: "dark",
+  },
+  darkMode: ['selector', '[data-theme="dark"]'],
 }
