@@ -8,11 +8,21 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        // 'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        // 'gradient-conic':
+        //   'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         'homepage-background': "url('/homepagebg3.jpg')",
         'category-background': "url('/categorybg2.jpg')",
+      },
+      colors: {
+        textdark: "rgba(var(--color-text-dark))",
+        textlight: "rgba(var(--color-text-light))",
+        texthoverlight: "rgba(var(--color-text-hover-light))",
+        texthoverdark:"rgba(var(--color-text-hover-dark))",
+        backgroundlight: "rgba(var(--color-background-light))",
+        backgrounddark: "rgba(var(--color-background-dark))",
+        backgroundhoverdark: "rgba(var(--color-background-hover-dark))",
+        backgroundhoverlight: "rgba(var(--color-background-hover-light))",
       },
     },
   },

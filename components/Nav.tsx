@@ -37,7 +37,7 @@ const Nav = () => {
             </div>
         </div>
         <div className="navbar-center">
-            <a className="btn btn-ghost normal-case text-xl text-black dark:text-white font-bold">FetchFast</a>
+            <a className="btn btn-ghost normal-case text-xl text-textdark font-bold">FetchFast</a>
         </div>
         <div className="navbar-end">
             <ThemeSwitch />

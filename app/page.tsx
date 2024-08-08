@@ -14,8 +14,8 @@ export default function Home() {
         <h1 className='text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white font-bold italic'>Your Gateway to Comfort and Convenience. Order, Relax, Enjoy!</h1>            
       </div>      
       <div className='flex justify-center items-center flex-row z-10 gap-10 pt-10 px-10'>
-        <Link href='/categories'><button className="btn btn-neutral bg-white dark:bg-slate-900 text-slate-900 dark:text-white leading-5 py-0.5 sm:py-0 hover:bg-slate-900 dark:hover:bg-white hover:text-white dark:hover:text-slate-900">View our Categories</button></Link>
-        <Link href=''><button className="btn btn-neutral bg-slate-900 dark:bg-white text-white dark:text-slate-900 leading-5 py-0.5 hover:bg-white dark:hover:bg-slate-900 hover:text-slate-900 dark:hover:text-white">Order product</button> </Link>               
+        <Link href='/categories'><button className="btn btn-neutral bg-backgroundlight text-textdark leading-5 py-0.5 sm:py-0 hover:bg-backgroundhoverdark hover:text-texthoverlight">View our Categories</button></Link>
+        <Link href=''><button className="btn btn-neutral bg-backgrounddark text-textlight leading-5 py-0.5 hover:bg-backgroundlight  hover:text-textdark">Order product</button> </Link>               
       </div>      
     </main>
   );
