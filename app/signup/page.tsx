@@ -77,6 +77,7 @@ const SignUp = () => {
           type="text"
           name="name"
           placeholder="Name"
+          required
           value={user.name}
           onChange={handleInputChange}
           className="input input-bordered w-full sm:w-3/4"
@@ -85,6 +86,7 @@ const SignUp = () => {
           type="email"
           name="email"
           placeholder="Email"
+          required
           value={user.email}
           onChange={handleInputChange}
           className="input input-bordered w-full sm:w-3/4"
@@ -94,6 +96,7 @@ const SignUp = () => {
           type="tel"
           name="phone"
           placeholder="Phone"
+          required
           value={user.phone}
           onChange={handleInputChange}
           className="input input-bordered w-full sm:w-3/4"
@@ -103,6 +106,7 @@ const SignUp = () => {
           type="password"
           name="password"
           placeholder="Password"
+          required
           value={user.password}
           onChange={handleInputChange}
           className="input input-bordered w-full sm:w-3/4"
@@ -111,6 +115,7 @@ const SignUp = () => {
           type="password"
           name="confirmPassword"
           placeholder="Confirm Password"
+          required
           value={user.confirmPassword}
           onChange={handleInputChange}
           className="input input-bordered w-full sm:w-3/4"
