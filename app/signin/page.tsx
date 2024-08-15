@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import { server } from '@/config';
-import GoogleAuth from '@/components/GoogleAuth'
+import Auth from '@/components/Auth'
 
 const SignIn = () => {
   const router = useRouter()
@@ -89,7 +89,7 @@ const SignIn = () => {
             <Link href="signup">Sign Up</Link>
           </span>
         </div>
-        <GoogleAuth />
+        <Auth />
       </form>
     </main>
   );
