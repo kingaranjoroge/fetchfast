@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import InactivityLogout from '@/components/InactivityLogout';
 import { Providers } from './providers';
 import { NextAuthProvider } from './authproviders';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'FetchFast',
