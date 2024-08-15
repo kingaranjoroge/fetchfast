@@ -4,7 +4,7 @@ export interface User {
     _id?: mongoose.Types.ObjectId;
     name: string;
     email: string;
-    phone: number;
+    phone?: number;
     password: string;
     role?: 'Admin' | 'Employee' | 'Customer';   
 }
