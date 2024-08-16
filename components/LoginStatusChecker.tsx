@@ -1,8 +1,11 @@
 "use client"
+
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useSession } from "next-auth/react"
 
 const LoginStatusChecker = () => {
+  const { status } = useSession()
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
@@ -12,6 +15,10 @@ const LoginStatusChecker = () => {
 
   if (isLoggedIn) {
     return null; // Or render something else for logged-in users
+  }
+
+  if (status === "authenticated") {
+    return null;
   }
 
   return (
