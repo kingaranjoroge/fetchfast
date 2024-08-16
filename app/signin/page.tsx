@@ -79,6 +79,7 @@ const SignIn = () => {
           onChange={handleInputChange}
           className="input input-bordered w-full sm:w-3/4"
         />
+        <Link className='text-violet-800' href="forgot-password">Forgot Password?</Link>
         <button type="submit" className="btn btn-primary w-full sm:w-3/4">
           Login
         </button>
