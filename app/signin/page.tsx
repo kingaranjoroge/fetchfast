@@ -60,7 +60,7 @@ const SignIn = () => {
   };
 
   return (
-    <main className="flex flex-grow justify-center items-center bg-base-100">
+    <main className="flex flex-grow flex-col gap-3 justify-center items-center bg-base-100">
       <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 w-full md:w-3/4 lg:w-1/2 px-8">
         <h1 className="text-2xl font-bold mb-4 text-violet-500">Login</h1>
         <input
@@ -90,8 +90,8 @@ const SignIn = () => {
             <Link href="signup">Sign Up</Link>
           </span>
         </div>
-        <Auth />
       </form>
+      <Auth />
     </main>
   );
 }
