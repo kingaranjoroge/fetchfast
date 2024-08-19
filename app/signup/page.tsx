@@ -43,7 +43,7 @@ const SignUp = () => {
           setPhoneError(message);
         } else {
           // User created successfully, navigate to the homepage
-          await router.push('/');
+          await router.push('/categories');
         }
       }
 
