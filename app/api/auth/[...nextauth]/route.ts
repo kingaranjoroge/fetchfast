@@ -2,6 +2,7 @@ import NextAuth from "next-auth/next";
 import GoogleProvider from "next-auth/providers/google";
 import connectMongoDB from '@/libs/mongodb';
 import EmailUser from "@/models/emailusers";
+import { server } from '@/config';
 
 const authOptions = {
   // Configure one or more authentication providers
@@ -21,7 +22,7 @@ const authOptions = {
           const userExists = await EmailUser.findOne({ email });
 
           if (!userExists) {
-            const res = await fetch("http://localhost:3000/api/emailusers", {
+            const res = await fetch(`${server}/api/emailusers`, {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
