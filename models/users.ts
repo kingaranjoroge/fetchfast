@@ -27,6 +27,14 @@ const userSchema = new Schema<User>(
             type: String,
             enum: ['Admin', 'Employee', 'Customer'],
             default: 'Customer'
+        },
+        resetToken: {
+            type: String,
+            default: null
+        },
+        resetTokenExpiry: {
+            type: Date,
+            default: null
         }
     },
     {
