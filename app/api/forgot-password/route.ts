@@ -26,6 +26,11 @@ export async function POST(request: Request) {
   user.resetTokenExpiry = resetTokenExpiry;
   await user.save();
 
+   // Check if email credentials are set
+   if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    return NextResponse.json({ message: 'Email credentials are not set' });
+  }
+
   // Send an email with the reset link
   const transporter = nodemailer.createTransport({
     service: 'Gmail',
