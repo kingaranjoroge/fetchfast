@@ -54,5 +54,5 @@ export async function POST(request: Request) {
 
   await transporter.sendMail(mailOptions);
 
-  return NextResponse.json({ message: 'Password reset email sent, check your email' });
+  return NextResponse.json({ message: 'Password reset email sent, check your mail' });
 }
