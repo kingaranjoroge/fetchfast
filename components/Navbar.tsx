@@ -38,7 +38,7 @@ const Navbar = () => {
             </div>
         </div>
         <div className="navbar-center">
-            <a className="btn btn-ghost normal-case text-xl text-textdark font-bold">FetchFast</a>
+            <a href="/" className="btn btn-ghost normal-case text-xl text-textdark font-bold">FetchFast</a>
         </div>
         <div className="navbar-end">
             {/* <Link href="signup"><button className="btn btn-outline mr-3 h-8 min-h-8 rounded-md text-white">SignUp</button></Link>
