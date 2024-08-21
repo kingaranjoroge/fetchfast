@@ -38,7 +38,7 @@ const ForgotPassword = () => {
         <button type="submit" className="btn btn-primary w-full sm:w-3/4">
           Send Reset Link
         </button>
-        {message && <div className="text-green-500">{message}</div>}
+        {message && message === 'Password reset email sent, check your mail'? <div className="text-green-500">{message}</div> : <div className="text-red-500">{message}</div>}
         {errorMessage && <div className="text-red-500">{errorMessage}</div>}
       </form>
     </main>
