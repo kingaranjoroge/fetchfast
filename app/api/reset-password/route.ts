@@ -8,6 +8,11 @@ export async function POST(request: Request) {
 
   const { token, password } = await request.json();
 
+  // Check if the password is not an empty string
+  if (!password || password.trim() === '') {
+    return NextResponse.json({ message: 'Password cannot be empty', success: false });
+  }
+
   // Find the user with the provided reset token and check if the token is still valid
   const user = await User.findOne({ resetToken: token, resetTokenExpiry: { $gt: Date.now() } });
 
