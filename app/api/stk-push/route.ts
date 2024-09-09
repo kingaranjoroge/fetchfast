@@ -11,7 +11,7 @@ const callbackUrl = process.env.MPESA_CALLBACK_URL;
 
 const getAccessToken = async () => {
   const auth = Buffer.from(`${consumerKey}:${consumerSecret}`).toString('base64');
-  const response = await axios.get('https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials', {
+  const response = await axios.get('https://api.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials', {
     headers: {
       Authorization: `Basic ${auth}`,
     },
@@ -25,7 +25,7 @@ const initiateSTKPush = async (phone: string, amount: number, accountReference: 
   const password = Buffer.from(`${shortcode}${passkey}${timestamp}`).toString('base64');
 
   const response = await axios.post(
-    'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest',
+    'https://api.safaricom.co.ke/mpesa/stkpush/v1/processrequest',
     {
       BusinessShortCode: shortcode,
       Password: password,
@@ -59,7 +59,7 @@ export async function POST(req: Request) {
     const response = await initiateSTKPush(formattedPhone, amount, uuidv4(), 'Payment for order');
     return NextResponse.json(response);
   } catch (error) {
-    console.error('Error initiating STK push:', error);
-    return NextResponse.json({ message: 'Internal Server Error', error: (error as Error).message }, { status: 500 });
+    console.error('Error initiating STK push:', (error as any).response?.data || (error as any).message);
+    return NextResponse.json({ message: 'Internal Server Error', error: (error as any).response?.data || (error as any).message }, { status: 500 });
   }
 }
