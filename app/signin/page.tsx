@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import { server } from '@/config';
-import Auth from '@/components/Auth'
+import Auth from '@/components/auth/Auth'
 
 const SignIn = () => {
   const router = useRouter()

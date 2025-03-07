@@ -1,14 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import Footer from '@/components/Footer';
-import InactivityLogout from '@/components/InactivityLogout';
+import InactivityLogout from '@/components/auth/InactivityLogout';
 import { Providers } from './providers';
 import { NextAuthProvider } from './authproviders';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata: Metadata = {
   title: 'FetchFast',
-  description: 'A Web-based Hotel Management and Online-delivery Services System',
+  description: 'A Web-based Hotel Management and Online Ordering & Delivery Services System',
 };
 
 export default function RootLayout({

@@ -3,7 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation';
-import { logout } from './Logout';
+import { logout } from './auth/Logout';
 import ThemeSwitch from './ThemeSwitch';
 
 const Nav = () => {
@@ -32,12 +32,12 @@ const Nav = () => {
                         <li><Link href="/categories/salads">Salads</Link></li>
                         <li><Link href="/categories/soups&stews">Soups & Stews</Link></li>
                     </div>     
-                    <li><a href="#" onClick={handleLogout}>Logout</a></li>               
+                    <li><Link href="#" onClick={handleLogout}>Logout</Link></li>               
                 </ul> 
             </div>
         </div>
         <div className="navbar-center">
-            <a href="/" className="btn btn-ghost normal-case text-xl text-textdark font-bold">FetchFast</a>
+            <Link href="/" className="btn btn-ghost normal-case text-xl text-textdark font-bold">FetchFast</Link>
         </div>
         <div className="navbar-end">
             <ThemeSwitch />

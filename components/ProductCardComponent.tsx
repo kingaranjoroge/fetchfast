@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import axios from 'axios';
+import { useRouter } from 'next/navigation'
 
 interface Props {
     imageLink: string | any,
@@ -12,6 +13,8 @@ interface Props {
 }
 
 const ProductCardComponent = ({ imageLink, name, price, description }: Props) => {
+    const router = useRouter();
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [quantity, setQuantity] = useState(1);
     const [phone, setPhone] = useState('');
@@ -40,8 +43,13 @@ const ProductCardComponent = ({ imageLink, name, price, description }: Props) =>
                 amount: calculateTotalPrice(),
             });
             console.log('STK Push Response:', response.data);
+
+            router.push('/categories');
         } catch (error) {
             console.error('Error initiating STK push:', error);
+
+            // Close modal
+            toggleModal();
         }
     };
 

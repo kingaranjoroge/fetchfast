@@ -1,9 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import CategoryComponent from '@/components/CategoryComponent'
-import Image from 'next/image'
 import Nav from '@/components/Nav'
-import appetizers from '../../public/categorycards-bg/appetizers.png'
 
 const Categories = () => {
   return (

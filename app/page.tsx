@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Navbar from '@/components/Navbar';
-import LoginStatusChecker from '@/components/LoginStatusChecker'; // Import the client component
+import LoginStatusChecker from '@/components/auth/LoginStatusChecker'; // Import the client component
 
 export default function Home() {
   return (

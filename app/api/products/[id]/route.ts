@@ -7,7 +7,7 @@ import { Props } from '@/common.types';
 export async function GET(request: Request, { params } : Props) {
   await connectMongoDB()
 
-  const { id } = params
+  const { id } = await params
 
   const product = await Product.findOne({ _id: id})
 
@@ -18,7 +18,7 @@ export async function PATCH(request: Request, { params } : Props) {
 
   await connectMongoDB();
 
-  const { id } = params 
+  const { id } = await params 
 
   const { name, categoryId } = await request.json();
 
@@ -38,7 +38,7 @@ export async function PATCH(request: Request, { params } : Props) {
 export async function DELETE(request: Request, { params } : Props) {
   await connectMongoDB();
 
-  const { id } = params;
+  const { id } = await params;
 
   // Delete the product from the database 
   const existingProduct = await Product.deleteOne({ _id: id });

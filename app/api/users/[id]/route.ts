@@ -6,7 +6,7 @@ import { Props } from '@/common.types';
 export async function GET(request: Request, { params } : Props) {
   await connectMongoDB()
 
-  const { id } = params
+  const { id } = await params
 
   const user = await User.findOne({ _id: id})
 
@@ -17,7 +17,7 @@ export async function PATCH(request: Request, { params } : Props) {
 
   await connectMongoDB();
 
-  const { id } = params 
+  const { id } = await params 
 
   const { name, email, phone, password, role } = await request.json();
 
@@ -41,7 +41,7 @@ export async function DELETE(request: Request, { params } : Props) {
 
   await connectMongoDB();
 
-  const { id } = params
+  const { id } = await params
  
   // Delete the user from the database
   await User.deleteOne({ _id: id })

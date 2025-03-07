@@ -22,7 +22,7 @@ const CategoryAProducts = () => {
             <ProductCardComponent  
                 imageLink = {beef_satay}
                 name = 'beef satay'
-                price = {1050}
+                price = {1}
                 description = 'Beef Satay with Peanut Sauce'
             />
             <ProductCardComponent  
