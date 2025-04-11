@@ -20,6 +20,7 @@ module.exports = {
   			backgrounddark: 'rgba(var(--color-background-dark))',
   			backgroundhoverdark: 'rgba(var(--color-background-hover-dark))',
   			backgroundhoverlight: 'rgba(var(--color-background-hover-light))',
+			backgroundgray: 'rgba(var(--color-background-gray))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
