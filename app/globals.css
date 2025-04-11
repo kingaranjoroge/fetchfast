@@ -13,6 +13,7 @@
     --color-background-dark: 0 0 0; /* black */
     --color-background-hover-dark: 0 0 0; /* black */
     --color-background-hover-light: 255 255 255; /* white */
+    --color-background-gray: 245 245 245; /* light gray */
   }
   :root[data-theme="dark"] {
     --color-text-dark: 255 255 255; /* white */
@@ -23,5 +24,11 @@
     --color-background-dark: 255 255 255; /* white */
     --color-background-hover-dark: 255 255 255; /* white */
     --color-background-hover-light: 0 0 0; /* black */
+    --color-background-gray: 19 19 19; /* dark gray */
   }
+}
+
+/* Hide footer when sidebar is open */
+body.sidebar-open footer {
+  display: none;
 }
