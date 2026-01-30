@@ -15,7 +15,7 @@ export default function Home() {
       </div>      
       <div className='flex justify-center items-center flex-row z-10 gap-10 pt-10 px-10'>
         <Link href='/categories'><button className="btn btn-neutral bg-backgroundlight text-textdark leading-5 py-0.5 sm:py-0 hover:bg-backgroundhoverdark hover:text-texthoverlight">View our Categories</button></Link>
-        <Link href=''><button className="btn btn-neutral bg-backgrounddark text-textlight leading-5 py-0.5 hover:bg-backgroundlight  hover:text-textdark">Order product</button> </Link>               
+        <Link href='/categories/appetizers'><button className="btn btn-neutral bg-backgrounddark text-textlight leading-5 py-0.5 hover:bg-backgroundlight  hover:text-textdark">Order product</button> </Link>               
       </div>      
     </main>
   );
