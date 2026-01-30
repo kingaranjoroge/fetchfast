@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="footer footer-center p-4 mt-auto overflow-y-auto bg-opacity-75 z-10 text-textdark">
       <div>
-        <p>Copyright © 2023 - All rights reserved by FetchFast ltd</p>
+        <p>Copyright © 2025 - All rights reserved by FetchFast ltd</p>
       </div>
     </footer>
   )
