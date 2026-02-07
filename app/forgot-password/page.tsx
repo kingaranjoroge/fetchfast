@@ -24,23 +24,30 @@ const ForgotPassword = () => {
   };
 
   return (
-    <main className="flex flex-grow flex-col gap-3 justify-center items-center bg-base-100">
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 w-full md:w-3/4 lg:w-1/2 px-8">
-        <h1 className="text-2xl font-bold mb-4 text-violet-500">Forgot Password</h1>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="input input-bordered w-full sm:w-3/4"
-        />
-        <button type="submit" className="btn btn-primary w-full sm:w-3/4">
-          Send Reset Link
-        </button>
-        {message && message === 'Password reset email sent, check your mail'? <div className="text-green-500">{message}</div> : <div className="text-red-500">{message}</div>}
-        {errorMessage && <div className="text-red-500">{errorMessage}</div>}
-      </form>
+    <main className="flex flex-grow flex-col justify-center items-center bg-backgroundgray py-12 px-4">
+      <div className="w-full max-w-md">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl bg-backgroundlight dark:bg-backgroundgray border border-black/5 dark:border-white/10 shadow-soft-md">
+          <h1 className="text-2xl font-display font-bold text-textdark mb-1">Reset password</h1>
+          <p className="text-sm text-textdark/70 mb-4">Enter your email and we&apos;ll send a reset link</p>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-backgroundgray/50 px-4 py-3 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-accent"
+          />
+          <button type="submit" className="w-full py-3 rounded-xl bg-brand hover:bg-brandhover text-white font-semibold transition-colors mt-2">
+            Send reset link
+          </button>
+          {message && (
+            <p className={message === 'Password reset email sent, check your mail' ? 'text-sm text-green-600 dark:text-green-400' : 'text-sm text-red-600 dark:text-red-400'}>
+              {message}
+            </p>
+          )}
+          {errorMessage && <p className="text-sm text-red-600 dark:text-red-400">{errorMessage}</p>}
+        </form>
+      </div>
     </main>
   );
 };

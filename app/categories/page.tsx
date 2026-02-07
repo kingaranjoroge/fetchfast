@@ -5,9 +5,13 @@ import Nav from '@/components/Nav'
 
 const Categories = () => {
   return (
-    <main className="flex flex-grow justify-center items-center flex-col">
+    <main className="flex flex-grow justify-center items-center flex-col min-h-screen">
       <Nav />
-      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-16 gap-8 place-content-center pt-20 pb-4">
+      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-16">
+        <h1 className="text-2xl sm:text-3xl font-display font-bold text-textdark text-center mb-10">
+          Categories
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center">
         <Link href="/categories/appetizers">
           <CategoryComponent name='Appetizers' backgroundImage='categorycards-bg/appetizers.png' />
         </Link>        
@@ -25,7 +29,8 @@ const Categories = () => {
         </Link>        
         <Link href="/categories/soups&stews">
           <CategoryComponent name='Soups & Stews' backgroundImage='categorycards-bg/soups-stews.png' />
-        </Link>                
+        </Link>
+        </div>
       </section>
     </main>
   )

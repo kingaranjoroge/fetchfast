@@ -15,13 +15,11 @@ export default function Error({
   }, [error])
 
   return (
-    <div className="flex flex-grow justify-center items-center">
-      <h2>Something went wrong!</h2>
+    <div className="flex flex-grow flex-col justify-center items-center gap-4 p-8 bg-backgroundgray min-h-[40vh]">
+      <h2 className="text-xl font-display font-bold text-textdark">Something went wrong</h2>
       <button
-        onClick={
-          // Attempt to recover by trying to re-render the segment
-          () => reset()
-        }
+        onClick={() => reset()}
+        className="px-5 py-2.5 rounded-xl bg-brand hover:bg-brandhover text-white font-semibold transition-colors"
       >
         Try again
       </button>

@@ -54,50 +54,65 @@ const ProductCardComponent = ({ imageLink, name, price, description }: Props) =>
     };
 
     return (
-        <div className="flex flex-col card w-64 md:w-72 xl:w-64 bg-base-300 shadow-xl">
-            <Image
-                src={imageLink}
-                alt="picture of product"
-            />
-            <div className="flex flex-col p-4 gap-2">
-                <div className='flex flex-row justify-between'>
-                    <h2 className="card-title text-sm font-bold">{name}</h2>
-                    <div className="badge badge-secondary">kes. {price} </div>
-                </div>                
-                <p className='text-sm overflow-hidden whitespace-nowrap overflow-ellipsis hover:overflow-visible hover:whitespace-normal' title={description}>{description}</p>
-                <div className="card-actions justify-center pt-2">
-                    <button className="btn btn-active btn-accent" onClick={toggleModal}>
+        <div className="flex flex-col w-64 md:w-72 xl:w-64 bg-backgroundlight dark:bg-backgroundgray rounded-2xl overflow-hidden shadow-soft hover:shadow-soft-md transition-shadow duration-200 border border-black/5 dark:border-white/10">
+            <div className="relative aspect-square overflow-hidden bg-backgroundgray">
+                <Image
+                    src={imageLink}
+                    alt={name}
+                    className="object-cover w-full h-full"
+                />
+            </div>
+            <div className="flex flex-col p-4 gap-3">
+                <div className="flex flex-row justify-between items-start gap-2">
+                    <h2 className="font-display font-bold text-textdark text-base leading-tight capitalize">{name}</h2>
+                    <span className="shrink-0 text-brand font-semibold text-sm">kes. {price}</span>
+                </div>
+                <p className="text-sm text-textdark/80 line-clamp-2" title={description}>{description}</p>
+                <div className="pt-1">
+                    <button
+                        className="w-full py-2.5 rounded-xl bg-brand hover:bg-brandhover text-white font-semibold text-sm transition-colors duration-200"
+                        onClick={toggleModal}
+                    >
                         Order
                     </button>
                 </div>
             </div>
             {isModalOpen && (
-                <div className="fixed inset-0 flex items-center justify-center z-50">
-                    <div className="bg-white p-8 rounded-lg shadow-lg">
-                        <h3 className="text-lg font-semibold mb-4">Enter Quantity</h3>
+                <div className="fixed inset-0 flex items-center justify-center z-[100] p-4" role="dialog" aria-modal="true" aria-labelledby="order-modal-title">
+                    <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={toggleModal} aria-hidden />
+                    <div className="relative flex flex-col bg-backgroundlight dark:bg-backgroundgray p-6 sm:p-8 rounded-2xl shadow-soft-lg w-full max-w-md border border-black/5 dark:border-white/10 max-h-[90vh] overflow-y-auto">
+                        <h3 id="order-modal-title" className="text-lg font-display font-bold text-textdark mb-4">Order details</h3>
+                        <label className="block text-sm font-medium text-textdark mb-1">Quantity</label>
                         <input
                             type="number"
+                            min={1}
                             value={quantity}
                             onChange={handleQuantityChange}
-                            className="w-full border rounded-lg px-3 py-2 mb-4"
+                            className="w-full border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 mb-4 bg-backgroundgray/50 text-textdark focus:outline-none focus:ring-2 focus:ring-brand"
                         />
-                        <h4 className="text-lg font-semibold mb-2">Total Price: kes. {calculateTotalPrice()}</h4>
+                        <p className="text-textdark font-semibold mb-4">Total: kes. {calculateTotalPrice()}</p>
+                        <label className="block text-sm font-medium text-textdark mb-1">Phone number</label>
                         <input
-                            type="text"
+                            type="tel"
                             value={phone}
                             onChange={handlePhoneChange}
-                            placeholder="Enter phone number"
-                            className="w-full border rounded-lg px-3 py-2 mb-4"
+                            placeholder="e.g. 254712345678"
+                            className="w-full border border-black/10 dark:border-white/10 rounded-xl px-4 py-2.5 mb-6 bg-backgroundgray/50 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-brand"
                         />
-                        <div className="flex justify-end space-x-2">
+                        <div className="flex gap-3 justify-center flex-shrink-0 mt-auto pt-2">
                             <button
-                                className="btn btn-active btn-accent"
+                                type="button"
+                                className="px-4 py-2.5 rounded-xl font-medium text-textdark bg-black/10 dark:bg-white/10 hover:opacity-90 transition-opacity"
                                 onClick={toggleModal}
                             >
-                                Close
+                                Cancel
                             </button>
-                            <button className="btn btn-active btn-accent" onClick={handlePayment}>
-                                Proceed to Payment
+                            <button
+                                type="button"
+                                className="px-5 py-2.5 rounded-xl font-semibold bg-brand text-white hover:bg-brandhover transition-colors"
+                                onClick={handlePayment}
+                            >
+                                Pay
                             </button>
                         </div>
                     </div>

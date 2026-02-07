@@ -16,9 +16,10 @@ import watermelon_salad from '../../../public/salads/watermelon-salad.png'
 
 const CategoryAProducts = () => {
   return (
-    <main className="flex flex-grow justify-center items-center pt-20">
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-x-16 gap-8 place-content-center mb-2">
-            <Nav />
+    <main className="flex flex-grow flex-col min-h-screen">
+        <Nav />
+        <section className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center">
             <ProductCardComponent  
                 imageLink = {antipasto_salad}
                 name = 'antipasto salad'
@@ -91,6 +92,7 @@ const CategoryAProducts = () => {
                 price = {350}
                 description = 'Watermelon Salad with Mint'
             />
+            </div>
         </section>
     </main>
   )

@@ -70,67 +70,69 @@ const SignUp = () => {
   };
 
   return (
-    <main className="flex flex-grow flex-col gap-3 justify-center items-center bg-base-100">
-      <form onSubmit={handleSubmit} className="flex flex-col justify-center items-center gap-2 w-full md:w-3/4 lg:w-1/2 px-8">
-        <h1 className="text-2xl font-bold mb-4 text-violet-500">Register</h1>
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          required
-          value={user.name}
-          onChange={handleInputChange}
-          className="input input-bordered w-full sm:w-3/4"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          required
-          value={user.email}
-          onChange={handleInputChange}
-          className="input input-bordered w-full sm:w-3/4"
-        />
-        {emailError && <div className="text-red-500">{emailError}</div>}
-        <input
-          type="tel"
-          name="phone"
-          placeholder="Phone"
-          required
-          value={user.phone}
-          onChange={handleInputChange}
-          className="input input-bordered w-full sm:w-3/4"
-        />
-        {phoneError && <div className="text-red-500">{phoneError}</div>}
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          required
-          value={user.password}
-          onChange={handleInputChange}
-          className="input input-bordered w-full sm:w-3/4"
-        />
-        <input
-          type="password"
-          name="confirmPassword"
-          placeholder="Confirm Password"
-          required
-          value={user.confirmPassword}
-          onChange={handleInputChange}
-          className="input input-bordered w-full sm:w-3/4"
-        />
-        <button type="submit" className="btn btn-primary w-full sm:w-3/4">
-          Register
-        </button>
-        <div className="flex flex-row w-full sm:w-3/4 justify-between items-center mt-1">
-          <span>Already have an account?</span>
-          <span>
-            <Link href="signin">Sign In</Link>
-          </span>
-        </div>
-      </form>
-      <Auth />
+    <main className="flex flex-grow flex-col justify-center items-center bg-backgroundgray py-12 px-4">
+      <div className="w-full max-w-md">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 p-6 sm:p-8 rounded-2xl bg-backgroundlight dark:bg-backgroundgray border border-black/5 dark:border-white/10 shadow-soft-md">
+          <h1 className="text-2xl font-display font-bold text-textdark mb-1">Create account</h1>
+          <p className="text-sm text-textdark/70 mb-4">Join FetchFast to order and enjoy</p>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            required
+            value={user.name}
+            onChange={handleInputChange}
+            className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-backgroundgray/50 px-4 py-3 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            value={user.email}
+            onChange={handleInputChange}
+            className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-backgroundgray/50 px-4 py-3 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          {emailError && <p className="text-sm text-red-600 dark:text-red-400">{emailError}</p>}
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            required
+            value={user.phone}
+            onChange={handleInputChange}
+            className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-backgroundgray/50 px-4 py-3 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          {phoneError && <p className="text-sm text-red-600 dark:text-red-400">{phoneError}</p>}
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            required
+            value={user.password}
+            onChange={handleInputChange}
+            className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-backgroundgray/50 px-4 py-3 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm password"
+            required
+            value={user.confirmPassword}
+            onChange={handleInputChange}
+            className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-backgroundgray/50 px-4 py-3 text-textdark placeholder:text-textdark/50 focus:outline-none focus:ring-2 focus:ring-brand"
+          />
+          <button type="submit" className="w-full py-3 rounded-xl bg-brand hover:bg-brandhover text-white font-semibold transition-colors mt-2">
+            Create account
+          </button>
+          <p className="text-sm text-textdark/80 text-center mt-2">
+            Already have an account? <Link href="signin" className="text-brand font-medium hover:underline">Sign in</Link>
+          </p>
+        </form>
+      </div>
+      <div className="mt-8 w-full max-w-md flex justify-center">
+        <Auth />
+      </div>
     </main>
   );
 };

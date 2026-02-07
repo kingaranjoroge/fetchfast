@@ -11,6 +11,9 @@ const authOptions = {
       clientSecret: process.env.GOOGLE_CLIENT_SECRET ?? ""
     })
   ],
+  debug: process.env.NEXTAUTH_DEBUG === 'true' || false,
+  secret: process.env.NEXTAUTH_SECRET,
+  useSecureCookies: process.env.NEXTAUTH_URL ? process.env.NEXTAUTH_URL.startsWith('https') : (process.env.NODE_ENV === 'production'),
   callbacks: {
     async signIn({ user, account }: { user: any, account?: any }) {
       if (account?.provider === "google") {

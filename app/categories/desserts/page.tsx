@@ -16,9 +16,10 @@ import Nav from '@/components/Nav'
 
 const CategoryAProducts = () => {
   return (
-    <main className="flex flex-grow justify-center items-center pt-20">
+    <main className="flex flex-grow flex-col min-h-screen">
         <Nav />
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-x-16 gap-8 place-content-center mb-2">
+        <section className="flex-1 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-24 pb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 place-items-center">
             <ProductCardComponent  
                 imageLink = {apple_pie}
                 name = 'apple pie'
@@ -91,6 +92,7 @@ const CategoryAProducts = () => {
                 price = {550}
                 description = 'Tiramisu with Espresso Mascarpone'
             />
+            </div>
         </section>
     </main>
   )

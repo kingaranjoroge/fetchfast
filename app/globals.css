@@ -2,29 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   :root {
-    --color-text-dark: 0 0 0;  /* black */
-    --color-text-light: 255 255 255; /* white */
-    --color-text-hover-light: 255 255 255; /* white */
-    --color-text-hover-dark: 0 0 0; /* black */
-    --color-background-light: 255 255 255; /* white */
-    --color-background-dark: 0 0 0; /* black */
-    --color-background-hover-dark: 0 0 0; /* black */
-    --color-background-hover-light: 255 255 255; /* white */
-    --color-background-gray: 245 245 245; /* light gray */
+    --color-text-dark: 15, 23, 42;
+    --color-text-light: 255, 255, 255;
+    --color-text-hover-light: 255, 255, 255;
+    --color-text-hover-dark: 15, 23, 42;
+    --color-background-light: 255, 255, 255;
+    --color-background-dark: 15, 23, 42;
+    --color-background-hover-dark: 30, 41, 59;
+    --color-background-hover-light: 248, 250, 252;
+    --color-background-gray: 241, 245, 249;
+    --color-accent: 99, 102, 241;
+    --color-accent-hover: 79, 70, 229;
+    --radius: 0.75rem;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   }
   :root[data-theme="dark"] {
-    --color-text-dark: 255 255 255; /* white */
-    --color-text-light: 0 0 0; /* black */
-    --color-text-hover-light: 0 0 0; /* black */
-    --color-text-hover-dark: 255 255 255; /* white */
-    --color-background-light: 0 0 0; /* black */
-    --color-background-dark: 255 255 255; /* white */
-    --color-background-hover-dark: 255 255 255; /* white */
-    --color-background-hover-light: 0 0 0; /* black */
-    --color-background-gray: 19 19 19; /* dark gray */
+    --color-text-dark: 248, 250, 252;
+    --color-text-light: 15, 23, 42;
+    --color-text-hover-light: 15, 23, 42;
+    --color-text-hover-dark: 248, 250, 252;
+    --color-background-light: 15, 23, 42;
+    --color-background-dark: 248, 250, 252;
+    --color-background-hover-dark: 226, 232, 240;
+    --color-background-hover-light: 30, 41, 59;
+    --color-background-gray: 30, 41, 59;
+    --color-accent: 129, 140, 248;
+    --color-accent-hover: 165, 180, 252;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.2);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3), 0 2px 4px -2px rgb(0 0 0 / 0.2);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3), 0 4px 6px -4px rgb(0 0 0 / 0.2);
+  }
+  body {
+    @apply antialiased text-textdark bg-backgroundgray transition-colors duration-200;
   }
 }
 

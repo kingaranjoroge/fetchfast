@@ -3,7 +3,6 @@
 import { FiSun, FiMoon } from "react-icons/fi"
 import { useState, useEffect } from 'react'
 import { useTheme } from 'next-themes'
-import Image from "next/image"
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false)
@@ -11,21 +10,21 @@ export default function ThemeSwitch() {
 
   useEffect(() => setMounted(true), [])
 
-  if (!mounted) return (
-    <Image
-      src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-      width={36}
-      height={36}
-      sizes="36x36"
-      alt="Loading Light/Dark Toggle"
-      priority={false}
-      title="Loading Light/Dark Toggle"
-    />
-  )
-
-  if (theme === 'dark') {
-    return <FiSun onClick={() => setTheme('light')} />
+  if (!mounted) {
+    return (
+      <div className="w-10 h-10 rounded-xl bg-backgroundgray animate-pulse" aria-hidden />
+    )
   }
 
-  return <FiMoon onClick={() => setTheme('dark')} />
+  const isDark = theme === 'dark'
+  return (
+    <button
+      type="button"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      className="p-2.5 rounded-xl text-textdark hover:bg-black/5 dark:hover:bg-white/10 transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+      aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+    >
+      {isDark ? <FiSun className="w-5 h-5" /> : <FiMoon className="w-5 h-5" />}
+    </button>
+  )
 }

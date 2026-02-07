@@ -7,20 +7,31 @@ module.exports = {
   ],
   theme: {
   	extend: {
+  		fontFamily: {
+  			sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+  			display: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+  		},
   		backgroundImage: {
   			'homepage-background': "url('/homepagebg3.jpg')",
   			'category-background': "url('/categorybg2.jpg')"
   		},
+  		boxShadow: {
+  			'soft': 'var(--shadow)',
+  			'soft-md': 'var(--shadow-md)',
+  			'soft-lg': 'var(--shadow-lg)',
+  		},
   		colors: {
-  			textdark: 'rgba(var(--color-text-dark))',
-  			textlight: 'rgba(var(--color-text-light))',
-  			texthoverlight: 'rgba(var(--color-text-hover-light))',
-  			texthoverdark: 'rgba(var(--color-text-hover-dark))',
-  			backgroundlight: 'rgba(var(--color-background-light))',
-  			backgrounddark: 'rgba(var(--color-background-dark))',
-  			backgroundhoverdark: 'rgba(var(--color-background-hover-dark))',
-  			backgroundhoverlight: 'rgba(var(--color-background-hover-light))',
-			backgroundgray: 'rgba(var(--color-background-gray))',
+  			textdark: 'rgb(var(--color-text-dark))',
+  			textlight: 'rgb(var(--color-text-light))',
+  			texthoverlight: 'rgb(var(--color-text-hover-light))',
+  			texthoverdark: 'rgb(var(--color-text-hover-dark))',
+  			backgroundlight: 'rgb(var(--color-background-light))',
+  			backgrounddark: 'rgb(var(--color-background-dark))',
+  			backgroundhoverdark: 'rgb(var(--color-background-hover-dark))',
+  			backgroundhoverlight: 'rgb(var(--color-background-hover-light))',
+			backgroundgray: 'rgb(var(--color-background-gray))',
+			brand: 'rgb(var(--color-accent))',
+			brandhover: 'rgb(var(--color-accent-hover))',
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
