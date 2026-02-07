@@ -6,7 +6,7 @@ import LoginStatusChecker from '@/components/auth/LoginStatusChecker'; // Import
 export default function Home() {
   return (
     <main className="flex flex-grow justify-center items-center flex-col relative overflow-hidden bg-homepage-background bg-cover bg-center bg-fixed min-h-[calc(100vh-6rem)]">
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/50" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/30 to-black/20" aria-hidden />
       <Navbar />
       <LoginStatusChecker />
       <div className="flex flex-col justify-start sm:justify-center sm:items-center z-10 gap-5 xl:gap-6 px-6 sm:px-8 text-center max-w-3xl">
